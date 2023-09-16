@@ -1,0 +1,206 @@
+body
+{
+    padding-top: 56px;
+}
+.jumbotron
+{
+  background-color:cadetblue;
+}
+
+.b-example-divider {
+    width: 100%;
+    height: 1rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+
+/* CSS untuk mengatur ukuran navbar */
+.navbar {
+    padding: 5px 0; /* Mengurangi padding atas dan bawah navbar */
+}
+
+/* CSS untuk mengatur ukuran gambar logo */
+.navbar-brand img {
+    max-width: 170px; /* Mengatur lebar maksimum gambar logo */
+    height: auto; /* Ini akan menjaga perbandingan aspek gambar */
+}
+
+/* CSS untuk mengatur ukuran teks menu navigasi */
+.navbar-nav .nav-link {
+    font-size: 16px; /* Mengatur ukuran teks menu navigasi */
+}
+
+/* CSS untuk efek "menyala" saat item menu navigasi di klik */
+.navbar-nav .nav-item:hover .nav-link {
+    color: #ff9900; /* Ganti dengan warna yang Anda inginkan */
+}
+
+/* CSS untuk kotak login */
+.appointment-btn {
+    margin-left: 5px;
+    background: #0000CD;
+    color: #fff;
+    border-radius: 15px;
+    padding: 6px 12px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    display: inline-block;
+  }
+
+  .appointment-btn:hover {
+    background: #0000CD;
+    color: #fff;
+  }
+
+
+/* Header*/
+.background-header
+{
+  background-image: url("../img/probeauty.png");
+  background-color: #fafbfc;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.button-primer {
+    background-color: #00bd8e;
+    border-color : #0b9b6b;
+    color        : #fff;
+    text-shadow: 0px 0px;
+}
+    .button-primer:hover {
+    background-color: #038c6a;
+    color        : #fff;
+    text-shadow: 0px 0px;
+}
+/* layanan*/
+.button-sekunder {
+    background-color: transparent;
+    border-color: #dbdbdb;
+    color: #0b9b6b;
+}
+.button-sekunder:hover {
+    background-color: #0b9b6b;
+    border-color: #dbdbdb;
+    color: #fff;
+}
+
+/*garis*/
+h2:before,
+h2:after {
+ background-color: #0b9b6b;
+ content: "";
+ display: inline-block;
+ height: 1px;
+ position: relative;
+ vertical-align: middle;
+ width: 27%;
+}
+h2:before {
+ right: 0.5em;
+ margin-left: -50%;
+}
+h2:after {
+ left: 0.5em;
+ margin-right: -50%;
+}
+
+/*Sign */
+
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .form-registration ipunt{
+    border-radius: 0;
+    margin-bottom: -1px;
+  }
+
+
+  /**Logout*/
+
+  .navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+  }
+
+  .navbar .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    color: #082744;
+    border: none;
+  }
+
+  .navbar .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navbar .dropdown ul a:hover,
+  .navbar .dropdown ul .active:hover,
+  .navbar .dropdown ul li:hover>a {
+    color: #1977cc;
+  }
+
+  .navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
+
+  @media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+      left: -90%;
+    }
+
+    .navbar .dropdown .dropdown:hover>ul {
+      left: -100%;
+    }
+  }

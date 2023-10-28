@@ -60,7 +60,7 @@ body
 /* Header*/
 .background-header
 {
-  background-image: url("../img/probeauty.png");
+  background-image: url("../img/probeauty1.png");
   background-color: #fafbfc;
   height: 600px;
   background-position: center;
@@ -204,3 +204,7 @@ h2:after {
       left: -100%;
     }
   }
+
+
+
+

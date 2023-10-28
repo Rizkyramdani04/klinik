@@ -37,6 +37,11 @@
                 </div>
                 @enderror
             </div>
+            <div class="form-floating">
+                <label for="password_confirmation">Confirm Password</label>
+                <input type="password" name="password_confirmation" class="form-control" id="password_confirmation"
+                placeholder="Confirm Password" required>
+              </div>
 
               <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Register</button>
             </form>

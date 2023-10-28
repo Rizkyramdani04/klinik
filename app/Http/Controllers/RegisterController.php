@@ -18,18 +18,20 @@ class RegisterController extends Controller
 
     public function store(Request $request)
     {
-      $validateData = $request->validate([
-        'name' => 'required|max:225',
-        'email' => 'required|email:dns|unique:users',
-        'password' => 'required|min:5|max:225'
-       ]);
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email:dns|unique:users',
+            'password' => 'required|min:5|max:255',
+            'password_confirmation' => 'required|same:password', // Ini memastikan konfirmasi password sama dengan password
+        ], [
+            'password_confirmation.same' => 'Konfirmasi password harus sama dengan password.'
+        ]);
 
-       $validateData['password'] = Hash::make($validateData['password']);
+        $validatedData['password'] = Hash::make($validatedData['password']);
 
-       User::create($validateData);
+        User::create($validatedData);
 
-      // $request->session()->flash('success', 'Registration successfull! Please login');
-
-       return redirect('/login')->with('success', 'Registration successfull! Please login');
+        return redirect('/login')->with('success', 'Registrasi berhasil! Silakan login.');
     }
+
 }

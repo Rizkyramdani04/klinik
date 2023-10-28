@@ -1,5 +1,12 @@
 body {
-  font-size: .875rem;
+  //  font-size: .875rem;
+    font-family: "Open Sans", sans-serif;
+    background: #f6f9ff;
+    color: #444444;
+}
+
+.mt-3 {
+    margin-top: 3;
 }
 
 .feather {
@@ -97,4 +104,41 @@ body {
 .form-control-dark:focus {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+ /* dashboard */
+
+ .card {
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+
+.card-body {
+    padding: 0 20px 20px 20px;
+}
+
+.card-title {
+    padding: 20px 0 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #012970;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: var(--bs-card-title-spacer-y);
+}
+
+@media (min-width: 1200px)
+.col-xl-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.dashboard .info-card {
+    padding-bottom: 10px;
+}
+
+.align-items-center {
+    align-items: center!important;
 }

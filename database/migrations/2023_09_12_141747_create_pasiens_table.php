@@ -15,7 +15,17 @@ return new class extends Migration
     {
         Schema::create('pasiens', function (Blueprint $table) {
             $table->id();
+            $table->string('no_antrian')->nullable();
+            $table->string('nama');
+            $table->string('alamat')->nullable();
+            $table->date('tanggal_lahir');
+            $table->string('nik')->unique()->nullable();
+            $table->string('jenis_kelamin');
+            $table->string('telepon');
+            $table->string('layanan');
             $table->timestamps();
+            $table->integer('nomor_antrian')->default(0);
+
         });
     }
 

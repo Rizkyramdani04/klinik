@@ -11,10 +11,10 @@
                   <a class="nav-link {{ ("Home") ? 'actice' : '' }}" href="#">Beranda</a>
                </li>
                <li class="nav-item">
-                   <a class="nav-link {{ ("layanan") ? 'actice' : '' }}" href="#layanan">Layanan</a>
+                   <a class="nav-link {{ ("service") ? 'actice' : '' }}" href="#service">Service</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link {{ ("kontak") ? 'actice' : '' }}" href="#kontak">Kontak</a>
+                  <a class="nav-link {{ ("contact") ? 'actice' : '' }}" href="#contact">Contact</a>
                </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -24,7 +24,7 @@
                           Welcome back, {{ auth()->user()->name }}
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">{{ auth()->user()->name }}</a>
+                          <a class="dropdown-item" href="/dashboard">{{ auth()->user()->name }}</a>
                           <div class="dropdown-divider"></div>
                           <form action="/logout" method="post">
                             @csrf

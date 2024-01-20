@@ -109,6 +109,19 @@
                 </div>
             </div> --}}
 
+            <input type="file" accept="image/*" capture="camera" id="inputImage">
+                        <button onclick="ambilGambar()">Ambil Gambar</button>
+
+                        <script>
+                            async function ambilGambar() {
+                                const input = document.getElementById('inputImage');
+                                const file = input.files[0];
+
+                                // Lakukan sesuatu dengan file gambar, misalnya mengirimnya ke server atau menyimpannya
+                                // Setelah itu, penggunaan recognition dapat dilakukan pada transaksi berikutnya.
+                            }
+                        </script>
+
         <br>
 
             <div class="form-group row">

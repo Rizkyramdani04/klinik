@@ -53,7 +53,8 @@ Route::group(['middleware' => ['admin']], function () {
   //  Route::get('/cetak-laporan', 'LaporanController@cetakLaporan')->name('cetak-laporan');
     Route::get('/dashboard/cetak/cetakLaporan', [LaporanController::class, 'indexLaporan'])->middleware('auth');
     Route::post('/filter-laporan', [LaporanController::class, 'filterLaporan'])->name('filter-laporan');
-
+    // Route::post('/dashboard/antrian/reset', [PasienController::class, 'resetAntrian'])
+    // ->name('antrian.reset');
 });
 
 Route::get('/cetak-member/{id}/{nama}/{tanggal_lahir}', [DashboardController::class, 'cetakKartuMember'])->name('cetak.member');

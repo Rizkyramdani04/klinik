@@ -19,7 +19,7 @@
             <div class="card-body">
                 <div class="card-title">Laporan Data Pasien</div>
         <br>
-        <a href="/dashboard/cetak/cetakLaporan" class="btn btn-success">Cetak Laporan Excel</a>
+        <a href="/dashboard/cetak/cetakLaporan" class="btn btn-success">Cetak Laporan</a>
 
             <br />
             <div class="datatable-top">

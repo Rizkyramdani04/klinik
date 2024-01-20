@@ -409,3 +409,31 @@ function bukaSidebar() {
 //       sidebar.classList.add('open'); // Buka sidebar
 //     }
 //   });
+
+    const apiKey = 'YOUR_API_KEY';
+    const apiUrl = 'https://api.faceprovider.com/recognize';
+
+    async function recognizeFace(imageData) {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({ image: imageData })
+        });
+
+        const result = await response.json();
+        return result;
+    }
+
+
+   // const image = /* hasil ambil gambar dari kamera atau unggah */;
+    const recognitionResult = await recognizeFace(image);
+
+    if (recognitionResult.success) {
+        // Wajah dikenali, lakukan sesuatu
+    } else {
+        // Wajah tidak dikenali, berikan pesan kepada pengguna
+    }
+

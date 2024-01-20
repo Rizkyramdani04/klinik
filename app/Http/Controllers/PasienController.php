@@ -63,6 +63,17 @@ class PasienController extends Controller
         // Menghasilkan nomor antrian baru
         $nomorAntrianBaru = 'A ' . sprintf('%03d', intval(substr($nomorAntrianTerbaru, 2)) + 1);
 
+        //   // Memeriksa apakah nomor antrian lebih besar dari 5
+        //   if ($nomorAntrianBaru > 2) {
+        //     // Menghentikan proses dan memberikan respons dengan pesan kesalahan
+        //   return redirect('/dashboard/daftar')->with('error', 'Antrian telah mencapai batas maksimal.');
+        // }
+        $batasMaksimalAntrian = 5; // Sesuaikan dengan batas maksimal yang diinginkan
+        if (intval(substr($nomorAntrianBaru, 2)) > $batasMaksimalAntrian) {
+            // Menghentikan proses dan memberikan respons dengan pesan kesalahan
+            return redirect('/dashboard/daftar')->with('error', 'Antrian telah mencapai batas maksimal.');
+        }
+
         // Membuat dan menyimpan data pasien ke dalam database
         $pasien = new Pasien($validatedData);
         $pasien->no_antrian = $nomorAntrianBaru;
@@ -71,6 +82,16 @@ class PasienController extends Controller
         // Redirect atau lakukan tindakan lain yang sesuai
         return redirect('/dashboard/daftar')->with('success', 'Pasien berhasil ditambahkan dengan nomor antrian ' . $nomorAntrianBaru);
         }
+
+        public function resetAntrian()
+        {
+            // Lakukan tindakan untuk mengosongkan data antrian, misalnya dengan menghapus data dari tabel antrian
+            Pasien::truncate();
+
+            // Setelah mengosongkan antrian, arahkan kembali admin ke halaman tampilan pasien
+            return redirect('dashboard/pasien')->with('success', 'Antrian telah diupdate.');
+        }
+
 
 
     /**

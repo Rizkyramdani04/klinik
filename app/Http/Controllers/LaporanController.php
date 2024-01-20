@@ -46,7 +46,9 @@ class LaporanController extends Controller
             abort(403);
 
         }
-        return Excel::download(new LaporanExport, 'laporan-'.Carbon::now()->timestamp.'.xlsx');
+        $export = new YourExportClass($yourData); // Gantilah YourExportClass dan $yourData sesuai dengan kebutuhan Anda
+         return Excel::download($export, 'file_excel.xlsx');
+       // return Excel::download(new LaporanExport, 'laporan-'.Carbon::now()->timestamp.'.xlsx');
     }
 
     public function cetakLaporan()
